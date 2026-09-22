@@ -1,0 +1,23 @@
+# Secrets and env
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+credentials.json
+secrets/
+
+# Dependencies / build
+node_modules/
+dist/
+build/
+.cache/
+.next/
+.out/
+
+# OS / editor
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+*.swp
