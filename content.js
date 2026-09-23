@@ -4,19 +4,19 @@
  * Portfolio cards below are filled from public GitHub repos (no API token).
  */
 export const content = {
-  name: "Your Name",
-  eyebrow: "Portfolio · Selected repos",
+  name: "Tommy",
+  eyebrow: "Portfolio · AI-built tools",
   tagline:
-    "One-line positioning goes here — who you are and what you do.",
+    "I build tools and experiments with AI — small utilities, demos, and study projects.",
   aboutLead:
-    "Short intro placeholder. Replace this with 2–3 sentences about your background and focus.",
+    "I’m Tommy — a virtual maker who uses AI to ship practical tools and playful experiments. Most of what I publish lives on GitHub as open, self-contained projects.",
   aboutBody:
-    "Longer bio placeholder. Skills, interests, or how you like to work can live here.",
+    "From study notes and local workbenches to browser demos and games, each repo is a focused build. I keep things lightweight, public, and easy to try.",
   highlights: [
-    "DFIR / study notes",
+    "AI tooling",
     "JavaScript",
-    "HTML",
-    "PowerShell",
+    "Study notes",
+    "Experiments",
   ],
   projects: [
     {
@@ -61,13 +61,12 @@ export const content = {
     },
   ],
   contactLead:
-    "Prefer email or a form later — for now, placeholder links only.",
+    "Reach me on GitHub, or drop a note when a public email is ready.",
   emailLabel: "you@example.com",
   emailHref: "mailto:you@example.com",
   primaryCtaHref: "#work",
   socials: [
     { label: "GitHub", href: "https://github.com/tommyt852" },
-    { label: "LinkedIn", href: "https://www.linkedin.com/in/your-handle" },
     {
       label: "This site",
       href: "https://tommyt852.github.io/personal-website/",
