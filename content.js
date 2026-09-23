@@ -22,7 +22,7 @@ export const content = {
     {
       title: "DFIR study notes",
       blurb:
-        "DFIR exam study notes — HTML site + PDFs (detection/artifacts focus).",
+        "Exam-focused DFIR notes you can browse as a site or download as PDFs.",
       tags: ["HTML", "DFIR", "Notes"],
       href: "https://github.com/tommyt852/dfir-study-notes",
       live: "https://tommyt852.github.io/dfir-study-notes/",
@@ -30,32 +30,32 @@ export const content = {
     {
       title: "KB workbench",
       blurb:
-        "Local knowledge base workbench (PowerShell web.ps1 + static www).",
+        "A local workbench for building and browsing your own knowledge base.",
       tags: ["JavaScript", "PowerShell"],
       href: "https://github.com/tommyt852/kb-workbench",
     },
     {
       title: "OTTO",
-      blurb: "Public JS project with a live GitHub Pages demo.",
+      blurb: "A small browser experiment with a live demo on Pages.",
       tags: ["JavaScript", "Pages"],
       href: "https://github.com/tommyt852/OTTO",
       live: "https://tommyt852.github.io/OTTO/",
     },
     {
       title: "Novel demo",
-      blurb: "Demo page built in JavaScript.",
+      blurb: "A short interactive demo page for reading-style content.",
       tags: ["JavaScript", "Demo"],
       href: "https://github.com/tommyt852/novel",
     },
     {
       title: "RPG game",
-      blurb: "Browser RPG experiment in JavaScript.",
+      blurb: "A lightweight browser RPG you can play in the tab.",
       tags: ["JavaScript", "Game"],
       href: "https://github.com/tommyt852/RPG-Game",
     },
     {
       title: "Daily work",
-      blurb: "Day-to-day work utilities in JavaScript.",
+      blurb: "Small day-to-day helper scripts and utilities.",
       tags: ["JavaScript"],
       href: "https://github.com/tommyt852/daily-work",
     },
