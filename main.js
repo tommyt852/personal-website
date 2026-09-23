@@ -43,7 +43,6 @@ function renderProjects() {
       const media = document.createElement("div");
       media.className = "project-media";
       media.setAttribute("aria-hidden", "true");
-      media.textContent = "Image placeholder";
 
       const body = document.createElement("div");
       body.className = "project-body";
@@ -52,10 +51,34 @@ function renderProjects() {
       const link = document.createElement("a");
       link.href = project.href || "#";
       link.textContent = project.title;
+      link.rel = "noopener noreferrer";
+      if ((project.href || "").startsWith("http")) link.target = "_blank";
       title.appendChild(link);
 
       const blurb = document.createElement("p");
       blurb.textContent = project.blurb;
+
+      const links = document.createElement("p");
+      links.className = "project-links";
+      const repo = document.createElement("a");
+      repo.href = project.href || "#";
+      repo.textContent = "Repo";
+      repo.rel = "noopener noreferrer";
+      if ((project.href || "").startsWith("http")) repo.target = "_blank";
+      links.appendChild(repo);
+
+      if (project.live) {
+        const sep = document.createElement("span");
+        sep.className = "project-links-sep";
+        sep.textContent = "·";
+        sep.setAttribute("aria-hidden", "true");
+        const live = document.createElement("a");
+        live.href = project.live;
+        live.textContent = "Live";
+        live.rel = "noopener noreferrer";
+        live.target = "_blank";
+        links.append(sep, live);
+      }
 
       const tags = document.createElement("ul");
       tags.className = "tag-list";
@@ -65,7 +88,7 @@ function renderProjects() {
         tags.appendChild(li);
       }
 
-      body.append(title, blurb, tags);
+      body.append(title, blurb, links, tags);
       article.append(media, body);
       return article;
     }),

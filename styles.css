@@ -249,14 +249,41 @@ code {
 }
 
 .project-media {
-  aspect-ratio: 16 / 10;
-  display: grid;
-  place-items: center;
-  background:
-    linear-gradient(135deg, #d9e7df 0%, #f0e4d2 55%, #e7efe8 100%);
-  color: var(--muted);
+  /* De-emphasized placeholder: thin accent strip, no competing label */
+  height: 4px;
+  aspect-ratio: auto;
+  background: linear-gradient(90deg, #d9e7df 0%, #f0e4d2 55%, #e7efe8 100%);
+}
+
+.project-links {
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.4rem;
   font-size: 0.9rem;
   font-weight: 600;
+}
+
+.project-links a {
+  color: var(--accent);
+  text-decoration: none;
+}
+
+.project-links a:hover,
+.project-links a:focus-visible {
+  text-decoration: underline;
+}
+
+.project-links-sep {
+  color: var(--muted);
+  font-weight: 400;
+}
+
+@media (max-width: 480px) {
+  .project-media {
+    display: none;
+  }
 }
 
 .project-body {
