@@ -20,14 +20,15 @@ export const content = {
   ],
   projects: [
     {
-      title: "dfir-study-notes",
+      title: "DFIR study notes",
       blurb:
         "DFIR exam study notes — HTML site + PDFs (detection/artifacts focus).",
       tags: ["HTML", "DFIR", "Notes"],
       href: "https://github.com/tommyt852/dfir-study-notes",
+      live: "https://tommyt852.github.io/dfir-study-notes/",
     },
     {
-      title: "kb-workbench",
+      title: "KB workbench",
       blurb:
         "Local knowledge base workbench (PowerShell web.ps1 + static www).",
       tags: ["JavaScript", "PowerShell"],
@@ -38,21 +39,22 @@ export const content = {
       blurb: "Public JS project with a live GitHub Pages demo.",
       tags: ["JavaScript", "Pages"],
       href: "https://github.com/tommyt852/OTTO",
+      live: "https://tommyt852.github.io/OTTO/",
     },
     {
-      title: "novel",
+      title: "Novel demo",
       blurb: "Demo page built in JavaScript.",
       tags: ["JavaScript", "Demo"],
       href: "https://github.com/tommyt852/novel",
     },
     {
-      title: "RPG-Game",
+      title: "RPG game",
       blurb: "Browser RPG experiment in JavaScript.",
       tags: ["JavaScript", "Game"],
       href: "https://github.com/tommyt852/RPG-Game",
     },
     {
-      title: "daily-work",
+      title: "Daily work",
       blurb: "Day-to-day work utilities in JavaScript.",
       tags: ["JavaScript"],
       href: "https://github.com/tommyt852/daily-work",
