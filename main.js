@@ -42,7 +42,18 @@ function renderProjects() {
 
       const media = document.createElement("div");
       media.className = "project-media";
-      media.setAttribute("aria-hidden", "true");
+
+      if (project.image) {
+        const img = document.createElement("img");
+        img.src = project.image;
+        img.alt = project.imageAlt || "";
+        img.loading = "lazy";
+        img.width = 1200;
+        img.height = 750;
+        media.appendChild(img);
+      } else {
+        media.setAttribute("aria-hidden", "true");
+      }
 
       const body = document.createElement("div");
       body.className = "project-body";
