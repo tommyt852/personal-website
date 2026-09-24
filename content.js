@@ -81,7 +81,7 @@ export const content = {
     { label: "GitHub", href: "https://github.com/tommyt852" },
     {
       label: "This site",
-      href: "https://tommyt852.github.io/personal-website/",
+      href: "https://tommyt852.github.io/",
     },
   ],
 };
