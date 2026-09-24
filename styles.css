@@ -411,7 +411,7 @@ code {
 
 @media (min-width: 1024px) {
   :root {
-    --shell: min(1120px, calc(100% - 6rem));
+    --shell: min(1120px, calc(100% - 8rem));
   }
 
   .project-grid {
@@ -422,10 +422,11 @@ code {
     padding: clamp(3.5rem, 7vw, 5.5rem) 0;
   }
 
+  /* Mirror Contact: copy grows, visual sizes to content */
   .hero-layout {
-    grid-template-columns: 1.35fr 0.65fr;
-    gap: 3rem;
+    grid-template-columns: 1fr auto;
     align-items: start;
+    gap: 2rem;
     width: 100%;
   }
 
@@ -434,12 +435,12 @@ code {
   }
 
   .hero-feature {
-    max-width: 26rem;
-    margin-inline: auto;
+    max-width: 22rem;
+    margin-inline: 0;
   }
 
   .hero-feature img {
-    max-height: 340px;
+    max-height: 280px;
     width: 100%;
     object-fit: cover;
   }
