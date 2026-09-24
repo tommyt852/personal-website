@@ -5,6 +5,8 @@
  */
 export const content = {
   name: "Tommy",
+  heroImage: "./assets/hero.webp",
+  heroImageAlt: "Warm abstract illustration for Tommy's portfolio",
   eyebrow: "Portfolio · AI-built tools",
   tagline:
     "I build tools and experiments with AI — small utilities, demos, and study projects.",

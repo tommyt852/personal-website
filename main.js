@@ -133,16 +133,26 @@ function renderHeroFeature() {
   const link = document.getElementById("hero-feature");
   const img = document.getElementById("hero-feature-img");
   const caption = document.getElementById("hero-feature-caption");
-  if (!featured || !link || !img) return;
+  if (!link || !img) return;
 
-  link.href = featured.live || featured.href || "#work";
-  if ((link.href || "").startsWith("http")) {
-    link.target = "_blank";
-    link.rel = "noopener noreferrer";
+  // Dedicated hero art when present; caption still ties to a featured project.
+  img.src = content.heroImage || "./assets/hero.webp";
+  img.alt =
+    content.heroImageAlt || "Warm abstract illustration for Tommy's portfolio";
+  img.width = 1600;
+  img.height = 1000;
+
+  if (featured) {
+    link.href = featured.live || featured.href || "#work";
+    if ((link.href || "").startsWith("http")) {
+      link.target = "_blank";
+      link.rel = "noopener noreferrer";
+    }
+    if (caption) caption.textContent = featured.title || "Featured work";
+  } else {
+    link.href = "#work";
+    if (caption) caption.textContent = "Selected work";
   }
-  img.src = featured.image;
-  img.alt = featured.imageAlt || featured.title || "";
-  if (caption) caption.textContent = featured.title || "Featured work";
 }
 
 function setTitle() {
