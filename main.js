@@ -123,11 +123,34 @@ function renderSocials() {
   );
 }
 
+
+function renderHeroFeature() {
+  const projects = content.projects || [];
+  const featured =
+    projects.find((p) => p.live && p.image) ||
+    projects.find((p) => p.image) ||
+    null;
+  const link = document.getElementById("hero-feature");
+  const img = document.getElementById("hero-feature-img");
+  const caption = document.getElementById("hero-feature-caption");
+  if (!featured || !link || !img) return;
+
+  link.href = featured.live || featured.href || "#work";
+  if ((link.href || "").startsWith("http")) {
+    link.target = "_blank";
+    link.rel = "noopener noreferrer";
+  }
+  img.src = featured.image;
+  img.alt = featured.imageAlt || featured.title || "";
+  if (caption) caption.textContent = featured.title || "Featured work";
+}
+
 function setTitle() {
   document.title = `${content.name} — Portfolio`;
 }
 
 bindText();
+renderHeroFeature();
 renderHighlights();
 renderProjects();
 renderSocials();

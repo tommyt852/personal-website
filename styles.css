@@ -115,8 +115,41 @@ code {
   padding: clamp(3.5rem, 8vw, 6.5rem) 0 clamp(3rem, 6vw, 5rem);
 }
 
-.hero-inner {
-  max-width: 46rem;
+.hero-layout {
+  display: grid;
+  gap: 2rem;
+  align-items: center;
+}
+
+.hero-copy {
+  max-width: 36rem;
+}
+
+.hero-visual {
+  display: none;
+}
+
+.hero-feature {
+  display: block;
+  text-decoration: none;
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  overflow: hidden;
+  box-shadow: var(--shadow);
+}
+
+.hero-feature img {
+  width: 100%;
+  aspect-ratio: 16 / 10;
+  object-fit: cover;
+}
+
+.hero-feature-caption {
+  display: block;
+  padding: 0.85rem 1rem 1rem;
+  font-weight: 600;
+  font-size: 0.95rem;
 }
 
 .eyebrow {
@@ -313,17 +346,32 @@ code {
   font-size: 0.95rem;
 }
 
-.contact-inner {
-  max-width: 40rem;
+.contact-layout {
+  display: grid;
+  gap: 1.5rem;
+}
+
+.contact-copy .lede {
+  margin-bottom: 0;
+}
+
+.contact-panel {
+  display: grid;
+  gap: 1rem;
+  justify-items: start;
 }
 
 .contact-cta {
-  margin-top: 0.5rem;
+  margin-top: 0;
 }
 
 .social-list {
-  margin-top: 1.25rem;
+  margin-top: 0;
   gap: 0.85rem;
+}
+
+.section.contact {
+  padding: clamp(2.25rem, 5vw, 3.5rem) 0;
 }
 
 .social-list a {
@@ -368,6 +416,37 @@ code {
 
   .project-grid {
     grid-template-columns: repeat(3, 1fr);
+  }
+
+  .hero {
+    display: flex;
+    align-items: center;
+    min-height: min(70vh, 720px);
+    padding-block: 0;
+  }
+
+  .hero-layout {
+    grid-template-columns: 1.1fr 0.9fr;
+    gap: 3rem;
+    width: 100%;
+  }
+
+  .hero-visual {
+    display: block;
+  }
+
+  .contact-layout {
+    grid-template-columns: 1.2fr 0.8fr;
+    align-items: center;
+    gap: 2rem;
+  }
+
+  .contact-panel {
+    background: var(--surface);
+    border: 1px solid var(--line);
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+    padding: 1.35rem 1.4rem;
   }
 }
 

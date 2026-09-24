@@ -5,9 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta
       name="description"
-      content="Personal portfolio and intro — placeholder content"
+      content="Tommy — AI-built tools, demos, and study projects"
     />
-    <title>Your Name — Portfolio</title>
+    <title>Tommy — Portfolio</title>
     <link rel="stylesheet" href="./styles.css" />
   </head>
   <body>
@@ -15,7 +15,7 @@
 
     <header class="site-header">
       <div class="shell header-inner">
-        <a class="logo" href="#top" data-bind="name">Your Name</a>
+        <a class="logo" href="#top" data-bind="name">Tommy</a>
         <nav class="nav" aria-label="Primary">
           <a href="#about">About</a>
           <a href="#work">Work</a>
@@ -26,18 +26,38 @@
 
     <main id="main">
       <section id="top" class="hero">
-        <div class="shell hero-inner">
-          <p class="eyebrow" data-bind="eyebrow">Portfolio · Placeholder</p>
-          <h1 data-bind="name">Your Name</h1>
-          <p class="tagline" data-bind="tagline">
-            One-line positioning goes here — who you are and what you do.
-          </p>
-          <div class="hero-actions">
-            <a class="btn btn-primary" href="#work" data-bind-href="primaryCtaHref"
-              >View work</a
-            >
-            <a class="btn btn-ghost" href="#contact">Get in touch</a>
+        <div class="shell hero-layout">
+          <div class="hero-copy">
+            <p class="eyebrow" data-bind="eyebrow">Portfolio · AI-built tools</p>
+            <h1 data-bind="name">Tommy</h1>
+            <p class="tagline" data-bind="tagline">
+              I build tools and experiments with AI — small utilities, demos, and
+              study projects.
+            </p>
+            <div class="hero-actions">
+              <a
+                class="btn btn-primary"
+                href="#work"
+                data-bind-href="primaryCtaHref"
+                >View work</a
+              >
+              <a class="btn btn-ghost" href="#contact">Get in touch</a>
+            </div>
           </div>
+          <aside class="hero-visual" aria-label="Featured work">
+            <a class="hero-feature" id="hero-feature" href="#work">
+              <img
+                id="hero-feature-img"
+                src="./assets/projects/dfir-study-notes.webp"
+                alt=""
+                width="1200"
+                height="750"
+              />
+              <span class="hero-feature-caption" id="hero-feature-caption"
+                >Featured work</span
+              >
+            </a>
+          </aside>
         </div>
       </section>
 
@@ -45,14 +65,8 @@
         <div class="shell section-grid">
           <div>
             <h2>About</h2>
-            <p class="lede" data-bind="aboutLead">
-              Short intro placeholder. Replace this with 2–3 sentences about
-              your background and focus.
-            </p>
-            <p data-bind="aboutBody">
-              Longer bio placeholder. Skills, interests, or how you like to
-              work can live here.
-            </p>
+            <p class="lede" data-bind="aboutLead"></p>
+            <p data-bind="aboutBody"></p>
           </div>
           <aside class="about-aside" aria-label="Highlights">
             <h3>Highlights</h3>
@@ -66,8 +80,8 @@
           <div class="section-head">
             <h2>Selected work</h2>
             <p class="lede">
-              Project cards below are placeholders — swap titles, blurb, and
-              links in <code>content.js</code>.
+              Selected public projects — titles, blurbs, and links live in
+              <code>content.js</code>.
             </p>
           </div>
           <div id="projects" class="project-grid"></div>
@@ -75,20 +89,21 @@
       </section>
 
       <section id="contact" class="section contact">
-        <div class="shell contact-inner">
-          <h2>Contact</h2>
-          <p class="lede" data-bind="contactLead">
-            Prefer email or a form later — for now, placeholder links only. No
-            form yet (keeps secrets and spam surface small).
-          </p>
-          <a
-            class="btn btn-primary contact-cta"
-            href="mailto:you@example.com"
-            data-bind-href="emailHref"
-            data-bind="emailLabel"
-            >you@example.com</a
-          >
-          <ul id="socials" class="social-list"></ul>
+        <div class="shell contact-layout">
+          <div class="contact-copy">
+            <h2>Contact</h2>
+            <p class="lede" data-bind="contactLead"></p>
+          </div>
+          <div class="contact-panel">
+            <a
+              class="btn btn-primary contact-cta"
+              href="mailto:you@example.com"
+              data-bind-href="emailHref"
+              data-bind="emailLabel"
+              >you@example.com</a
+            >
+            <ul id="socials" class="social-list"></ul>
+          </div>
         </div>
       </section>
     </main>
@@ -96,13 +111,12 @@
     <footer class="site-footer">
       <div class="shell footer-inner">
         <p>
-          <span data-bind="name">Your Name</span> · Placeholder site ·
+          <span data-bind="name">Tommy</span> · Portfolio ·
           <span data-bind="year"></span>
         </p>
       </div>
     </footer>
 
-    <!-- Mobile thumb-zone primary CTA -->
     <div class="mobile-cta" aria-hidden="false">
       <a class="btn btn-primary" href="#contact">Contact</a>
     </div>
