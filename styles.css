@@ -422,13 +422,13 @@ code {
     padding: clamp(3.5rem, 7vw, 5.5rem) 0;
   }
 
-  /* Shared fixed columns so Hero + Contact align on one vertical grid */
+  /* Same shell-edge columns for Hero, About, Contact */
   .hero-layout,
-  .contact-layout {
+  .contact-layout,
+  .section-grid {
     display: grid;
-    grid-template-columns: minmax(18rem, 36rem) 22rem;
+    grid-template-columns: minmax(0, 1fr) 22rem;
     column-gap: 3rem;
-    justify-content: center;
     align-items: start;
     width: 100%;
   }
