@@ -122,7 +122,7 @@ code {
 }
 
 .hero-copy {
-  max-width: 36rem;
+  max-width: 36rem; /* overridden at ≥1024 by shared column grid */
 }
 
 .hero-visual {
@@ -422,11 +422,14 @@ code {
     padding: clamp(3.5rem, 7vw, 5.5rem) 0;
   }
 
-  /* Mirror Contact: copy grows, visual sizes to content */
-  .hero-layout {
-    grid-template-columns: 1fr auto;
+  /* Shared fixed columns so Hero + Contact align on one vertical grid */
+  .hero-layout,
+  .contact-layout {
+    display: grid;
+    grid-template-columns: minmax(18rem, 36rem) 22rem;
+    column-gap: 3rem;
+    justify-content: center;
     align-items: start;
-    gap: 2rem;
     width: 100%;
   }
 
@@ -434,8 +437,13 @@ code {
     display: block;
   }
 
+  .hero-copy {
+    max-width: none;
+  }
+
   .hero-feature {
-    max-width: 22rem;
+    max-width: none;
+    width: 100%;
     margin-inline: 0;
   }
 
@@ -445,13 +453,8 @@ code {
     object-fit: cover;
   }
 
-  .contact-layout {
-    grid-template-columns: 1fr auto;
-    align-items: center;
-    gap: 2rem;
-  }
-
   .contact-panel {
+    width: 100%;
     background: var(--surface);
     border: 1px solid var(--line);
     border-radius: var(--radius);
